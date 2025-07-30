@@ -2,6 +2,7 @@ let today = new Date();
 // console.log('today: ' + today);
 let day = today.getDate();
 // console.log('day: ' + day);
+
 let dayFormatted;
 if (day < 10) {
     dayFormatted = '0' + day;
@@ -9,6 +10,7 @@ if (day < 10) {
     dayFormatted = day;
 }
 // console.log('dayFormatted: ' + dayFormatted);
+
 let month = today.getMonth();
 // console.log('month: ' + month);
 let monthFormatted;
@@ -18,10 +20,12 @@ if (month + 1 < 10) {
     monthFormatted = month + 1;
 }
 // console.log('monthFormatted: ' + monthFormatted);
+
 let year = today.getFullYear();
 // console.log('year: ' + year)
 let dateFormatted = dayFormatted + '.' + monthFormatted + '.' + year;
 // console.log('dateFormatted: ' + dateFormatted);
+
 document.getElementById("fullDate1").textContent = dateFormatted;
 document.getElementById("fullDate2").textContent = dateFormatted;
 
@@ -83,32 +87,31 @@ document.getElementById('fullMonth').textContent = monthGerman;
 
 
 
-function daysInMonth(year, month) {
-    return new Date(year, month + 1, 0).getDate();//......
-}
+const monthNames = [
+      'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+      'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
+    ];
 
+    function getDaysInMonth(year, month) {
+      return new Date(year, month + 1, 0).getDate();
+    }
 
+    let daysInMonth = getDaysInMonth(year, month);
+    document.getElementById('daysInMonth').textContent = daysInMonth;
+    
 
-
-const lastDay = new Date(); //,,...
-const _year = lastDaay.getFullYear(); //......
-const _month = lastDay.getMonth();//......
-
-const tage = daysInMonth(year, month);//......
-
-
-document.getElementById("daysInMonth").textContent;//......
-
-
-
-
-
-
+    console.log('Jahr:', year);
+    console.log('Monat:', month);
+    console.log('Tage im Monat:', daysInMonth);
     
 
 
 
 
 
-const lastDay1 = new Date(new Date().getFullYear(), new Date.getMonth(), 0);
-console.log(lastDay1)
+
+
+
+
+
+

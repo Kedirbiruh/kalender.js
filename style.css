@@ -1,13 +1,13 @@
-body{
+body {
     background-color: rgb(48, 42, 42);
     margin-right: 30px;
     margin-left: 30px;
     background-image: url('IT.jfif');
     background-size: cover;
-   
+
 }
 
-.container{
+.container {
     display: grid;
     grid-template-areas:
         "header header"
@@ -18,32 +18,32 @@ body{
     padding: 30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    
+
 }
 
 
-.header{
+.header {
     grid-area: header;
     padding: 5px 0 30px 0;
     font-size: 1.2rem;
     font-size: 3cap;
     border-radius: 3rem;
-    color:  #6b5b5b;
+    color: #6b5b5b;
 
     &:hover {
-  background-color: rgb(124, 123, 121);
-  }
+        background-color: rgb(124, 123, 121);
+    }
 
 }
 
-#kalenderblatt{
+#kalenderblatt {
     grid-area: kalenderblatt;
     border-collapse: collapse;
 
 }
 
 
-#month{
+#month {
     height: 100px;
     font-size: 3rem;
     background-color: #6b5b5b;
@@ -52,21 +52,23 @@ body{
 }
 
 
-table,th,td{
+table,
+th,
+td {
     width: 600px;
     table-layout: fixed;
     border-radius: 1cap;
-   
+
 }
 
-th{
+th {
 
-    background-color:  #6b5b5b;
+    background-color: #6b5b5b;
     height: 4cap;
     font-size: 25px;
 }
 
-td{
+td {
 
     background-color: rgb(124, 123, 121);
     font-size: 25px;
@@ -76,38 +78,40 @@ td{
 }
 
 
-td:hover{
+td:hover {
     background-color: #6b5b5b;
 }
 
 
 
-td:nth-child(1){
+td:nth-child(1) {
     background-color: #6b5b5b;
     font-weight: bold;
     font-size: 25px;
 }
 
 
-#samstag, SA{
-color: darkblue;
+#samstag,
+SA {
+    color: darkblue;
 
 }
 
 
-#sonntag, SO {
+#sonntag,
+SO {
     color: darkred;
-}    
+}
 
 
 
-td:nth-child(7){
+td:nth-child(7) {
 
     color: darkblue;
 }
 
 
-td:nth-child(8){
+td:nth-child(8) {
     color: darkred;
 }
 
@@ -119,7 +123,7 @@ td:nth-child(8){
 
 #text_box {
     grid-area: text_box;
-    color:  rgb(124, 123, 121);
+    color: rgb(124, 123, 121);
     font-size: 1rem;
     letter-spacing: 2px;
     text-align: left;

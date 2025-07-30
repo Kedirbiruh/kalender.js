@@ -27,6 +27,7 @@ document.getElementById("fullDate2").textContent = dateFormatted;
 
 let weekdayIndex = today.getDay();
 console.log('weekdayIndex: ' + weekdayIndex);
+
 let weekday;
 if (weekdayIndex === 0) {
     weekday = 'Sonntag';
@@ -43,6 +44,7 @@ if (weekdayIndex === 0) {
 } else {
     weekday = 'Samstag';
 }
+
 console.log('weekday: ' + weekday);
 document.getElementById('fullWeekday1').textContent = weekday;
 document.getElementById('fullWeekday2').textContent = weekday;
@@ -73,6 +75,32 @@ if (month === 0) {
 } else {
     monthGerman = 'Dezember';
 }
-console.log('monthGerman: ' + monthGerman);
 
+console.log('monthGerman: ' + monthGerman);
 document.getElementById('fullMonth').textContent = monthGerman;
+
+
+
+function daysInMonth(year, month) {
+    return new Date(year, month + 1, 0).getDate();
+}
+
+
+
+
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth();
+
+const tage = daysInMonth(year, month);
+
+
+document.getElementById("daysInMonth").textContent;
+
+
+
+
+
+
+    * getMonth...
+

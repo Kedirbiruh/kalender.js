@@ -81,26 +81,34 @@ document.getElementById('fullMonth').textContent = monthGerman;
 
 
 
+
+
 function daysInMonth(year, month) {
-    return new Date(year, month + 1, 0).getDate();
+    return new Date(year, month + 1, 0).getDate();//......
 }
 
 
 
 
-const today = new Date();
-const year = today.getFullYear();
-const month = today.getMonth();
+const lastDay = new Date(); //,,...
+const _year = lastDaay.getFullYear(); //......
+const _month = lastDay.getMonth();//......
 
-const tage = daysInMonth(year, month);
-
-
-document.getElementById("daysInMonth").textContent;
+const tage = daysInMonth(year, month);//......
 
 
+document.getElementById("daysInMonth").textContent;//......
 
 
 
 
-    * getMonth...
 
+
+    
+
+
+
+
+
+const lastDay1 = new Date(new Date().getFullYear(), new Date.getMonth(), 0);
+console.log(lastDay1)

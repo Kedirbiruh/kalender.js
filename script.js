@@ -130,8 +130,6 @@ console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}.`);
 
 
 
-
-
 const feiertage = [
     { monat: 0, tag: 1, name: "Neujahr" },
     { monat: 4, tag: 1, name: "Tag der Arbeit" },
@@ -164,9 +162,10 @@ if (istFeiertag) {
 
 
 
-
-
-
+const aktuellerMonat = monate[today.getMonth()];
+let yearMonth = `${year} ${monthNames[today.getMonth()]}`;
+document.getElementById('monthName').textContent = yearMonth;
+console.log(yearMonth);
 
 
 

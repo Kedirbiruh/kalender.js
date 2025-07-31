@@ -136,6 +136,45 @@ console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}.`);
 
 
 
+const feiertage = [
+    { monat: 0, tag: 1, name: "Neujahr" },
+    ...
+];
+
+jaNein = "kein";
+for (f of feiertage) {
+    if (f.monat === today.getMonth() && f.tag == today.getDate()) {
+        // feiertag!
+        jaNein = "ein";
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+Feiertag	Datum 2025	Typ
+
+
+Neujahr	01.01.2025	Fest
+Karfreitag	18.04.2025	Beweglich
+Ostermontag	21.04.2025	Beweglich
+Tag der Arbeit	01.05.2025	Fest
+Christi Himmelfahrt	29.05.2025	Beweglich
+Pfingstmontag	09.06.2025	Beweglich
+Fronleichnam	19.06.2025	Beweglich
+Tag der Deutschen Einheit	03.10.2025	Fest
+1. Weihnachtsfeiertag	25.12.2025	Fest
+2. Weihnachtsfeiertag	26.12.2025	Fest
+
+
+
+
+
 
 
 

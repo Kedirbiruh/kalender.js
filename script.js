@@ -132,8 +132,32 @@ console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}.`);
 
 
 
+const feiertage = [
+    { monat: 0, tag: 1, name: "Neujahr" },
+    { monat: 4, tag: 1, name: "Tag der Arbeit" },
+    { monat: 9, tag: 3, name: "Tag der Deutschen Einheit" },
+    { monat: 11, tag: 25, name: "1. Weihnachtstag" },
+    { monat: 11, tag: 26, name: "2. Weihnachtstag" }
+];
 
 
+
+let istFeiertag = false;
+let feiertagsName = "";
+
+for (let f of feiertage) {
+    if (f.monat === today.getMonth() && f.tag === today.getDate()) {
+        istFeiertag = true;
+        feiertagsName = f.name;
+        break;
+    }
+}
+
+if (istFeiertag) {
+    document.getElementById("holiday").textContent = `Heute ist ein gesetzlicher Feiertag in Hessen: ${feiertagsName}.`;
+} else {
+    document.getElementById("holiday").textContent = "Heute ist kein gesetzlicher Feiertag in Hessen.";
+}
 
 
 

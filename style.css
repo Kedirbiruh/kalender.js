@@ -2,7 +2,7 @@ body{
     background-color: rgb(48, 42, 42);
     margin-right: 30px;
     margin-left: 30px;
-    background-image: url('IT.jfif');
+    background-image: url('IT.jfif')//..... // optional
     background-size: cover;
    
 }

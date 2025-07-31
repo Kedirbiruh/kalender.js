@@ -162,14 +162,5 @@ if (istFeiertag) {
 
 
 
-const aktuellerMonat = monate[today.getMonth()];
-let yearMonth = `${year} ${monthNames[today.getMonth()]}`;
-document.getElementById('monthName').textContent = yearMonth;
-console.log(yearMonth);
-
-
-
-
-
 
 

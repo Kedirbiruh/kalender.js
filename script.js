@@ -85,25 +85,64 @@ document.getElementById('fullMonth').textContent = monthGerman;
 
 
 
-
-
 const monthNames = [
-      'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
-      'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
-    ];
+    'Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+    'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'
+];
 
-    function getDaysInMonth(year, month) {
-      return new Date(year, month + 1, 0).getDate();
+
+function getDaysInMonth(year, month) {
+    return new Date(year, month + 1, 0).getDate();
+}
+
+
+for (let i = 0; i < 12; i++) {
+    const days = getDaysInMonth(year, i);
+    console.log(`${monthNames[i]}: ${days} Tage`);
+}
+
+
+let daysInMonth = getDaysInMonth(year, month);
+document.getElementById('daysInMonth').textContent = daysInMonth;
+document.getElementById('monthName').textContent = monthNames[month];
+
+
+
+function getNthWeekdayInMonth(date) {
+    const weekdayIndex = date.getDay();
+    const dayOfMonth = date.getDate();
+    let count = 0;
+
+
+    for (let d = 1; d <= dayOfMonth; d++) {
+        let current = new Date(date.getFullYear(), date.getMonth(), d);
+        if (current.getDay() === weekdayIndex) {
+            count++;
+        }
     }
+    return count;
+}
 
-    let daysInMonth = getDaysInMonth(year, month);
-    document.getElementById('daysInMonth').textContent = daysInMonth;
-    
+let nthWeekday = getNthWeekdayInMonth(today);
+document.getElementById('nthWeekday').textContent = nthWeekday;
 
-    console.log('Jahr:', year);
-    console.log('Monat:', month);
-    console.log('Tage im Monat:', daysInMonth);
-    
+console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}.`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

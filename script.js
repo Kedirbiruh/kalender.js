@@ -98,7 +98,7 @@ function getDaysInMonth(year, month) {
 
 for (let i = 0; i < 12; i++) {
     const days = getDaysInMonth(year, i);
-    console.log(`${monthNames[i]}: ${days} Tage`);
+    console.log(monthNames[i] + ": " + days + " Tage");
 }
 
 
@@ -113,7 +113,6 @@ function getNthWeekdayInMonth(date) {
     const dayOfMonth = date.getDate();
     let count = 0;
 
-
     for (let d = 1; d <= dayOfMonth; d++) {
         let current = new Date(date.getFullYear(), date.getMonth(), d);
         if (current.getDay() === weekdayIndex) {
@@ -123,10 +122,12 @@ function getNthWeekdayInMonth(date) {
     return count;
 }
 
+
 let nthWeekday = getNthWeekdayInMonth(today);
 document.getElementById('nthWeekday').textContent = nthWeekday;
 
 console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}.`);
+
 
 
 

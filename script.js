@@ -28,22 +28,27 @@ let dateFormatted = dayFormatted + '.' + monthFormatted + '.' + year;
 
 document.getElementById("fullDate1").textContent = dateFormatted;
 document.getElementById("fullDate2").textContent = dateFormatted;
+document.title = "Kalender vom " + dateFormatted;
 
-let weekdayIndex = today.getDay();
-console.log('weekdayIndex: ' + weekdayIndex);
+
+
+
+
+let weekdaysIndex= today.getDay();
+console.log('weekdaysIndex: ' + weekdaysIndex);
 
 let weekday;
-if (weekdayIndex === 0) {
+if (weekdaysIndex=== 0) {
     weekday = 'Sonntag';
-} else if (weekdayIndex === 1) {
+} else if (weekdaysIndex=== 1) {
     weekday = 'Montag';
-} else if (weekdayIndex === 2) {
+} else if (weekdaysIndex=== 2) {
     weekday = 'Dienstag';
-} else if (weekdayIndex === 3) {
+} else if (weekdaysIndex=== 3) {
     weekday = 'Mittwoch';
-} else if (weekdayIndex === 4) {
+} else if (weekdaysIndex=== 4) {
     weekday = 'Donnerstag';
-} else if (weekdayIndex === 5) {
+} else if (weekdaysIndex=== 5) {
     weekday = 'Freitag';
 } else {
     weekday = 'Samstag';
@@ -109,24 +114,39 @@ document.getElementById('monthName').textContent = monthNames[month];
 
 
 function getNthWeekdayInMonth(date) {
-    const weekdayIndex = date.getDay();
+    const weekdaysIndex= date.getDay();
     const dayOfMonth = date.getDate();
     let count = 0;
 
     for (let d = 1; d <= dayOfMonth; d++) {
         let current = new Date(date.getFullYear(), date.getMonth(), d);
-        if (current.getDay() === weekdayIndex) {
+        if (current.getDay() === weekdaysIndex) {
             count++;
         }
     }
-    return count;
+
+    let ordinal;
+    if (count === 1) {
+        ordinal = 'erste';
+    } else if (count === 2) {
+        ordinal = 'zweite';
+    } else if (count === 3) {
+        ordinal = 'dritte';
+    } else if (count === 4) {
+        ordinal = 'vierte';
+    } else {
+        ordinal = 'fünfte';
+    }
+
+    return ordinal;
 }
+
 
 
 let nthWeekday = getNthWeekdayInMonth(today);
 document.getElementById('nthWeekday').textContent = nthWeekday;
 
-console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}.`);
+console.log(`Heute ist der ${nthWeekday}. ${weekday} im Monat ${monthGerman}`);
 
 
 

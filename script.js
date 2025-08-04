@@ -34,21 +34,21 @@ document.title = "Kalender vom " + dateFormatted;
 
 
 
-let weekdaysIndex= today.getDay();
+let weekdaysIndex = today.getDay();
 console.log('weekdaysIndex: ' + weekdaysIndex);
 
 let weekday;
-if (weekdaysIndex=== 0) {
+if (weekdaysIndex === 0) {
     weekday = 'Sonntag';
-} else if (weekdaysIndex=== 1) {
+} else if (weekdaysIndex === 1) {
     weekday = 'Montag';
-} else if (weekdaysIndex=== 2) {
+} else if (weekdaysIndex === 2) {
     weekday = 'Dienstag';
-} else if (weekdaysIndex=== 3) {
+} else if (weekdaysIndex === 3) {
     weekday = 'Mittwoch';
-} else if (weekdaysIndex=== 4) {
+} else if (weekdaysIndex === 4) {
     weekday = 'Donnerstag';
-} else if (weekdaysIndex=== 5) {
+} else if (weekdaysIndex === 5) {
     weekday = 'Freitag';
 } else {
     weekday = 'Samstag';
@@ -114,7 +114,7 @@ document.getElementById('monthName').textContent = monthNames[month];
 
 
 function getNthWeekdayInMonth(date) {
-    const weekdaysIndex= date.getDay();
+    const weekdaysIndex = date.getDay();
     const dayOfMonth = date.getDate();
     let count = 0;
 
